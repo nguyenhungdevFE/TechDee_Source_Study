@@ -1,0 +1,1 @@
+{"name":"Local: uuTien","url":"d:\\PTIT_C++\\uuTien.cpp","tests":[{"id":1699104073188,"input":"4\nNguyen  hong ngat\n22\nKinh\n1\n  Chu thi MINh\n14\nDao\n3\nnguyen Hung\n22\nKinh\n1\nnguyen Vo Hung\n24\nKinh\n1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\PTIT_C++\\uuTien.cpp","group":"local","local":true}

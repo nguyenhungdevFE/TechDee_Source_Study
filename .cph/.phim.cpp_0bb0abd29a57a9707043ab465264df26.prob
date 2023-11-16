@@ -1,0 +1,1 @@
+{"name":"Local: phim","url":"d:\\PTIT_C++\\phim.cpp","tests":[{"id":1699150434058,"input":"2 3\nHai huoc\nTinh cam\nTL001\n25/11/2021\nPhim so 1\n10\nTL001\n04/12/2021\nPhim so 2\n15\nTL002\n25/11/2021\nPhim so 3\n5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\PTIT_C++\\phim.cpp","group":"local","local":true}
