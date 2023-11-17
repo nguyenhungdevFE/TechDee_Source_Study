@@ -1,0 +1,1 @@
+{"name":"Local: nguoiDiDuLich","url":"d:\\PTIT_C++\\nguoiDiDuLich.cpp","tests":[{"id":1700213963449,"input":"6\n0 31 25 23 10 27\n16 0 2 7 12 12\n3 3 0 25 54 5\n15 2 33 0 50 40\n16 15 32 3 0 23\n8 20 13 28 21 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\PTIT_C++\\nguoiDiDuLich.cpp","group":"local","local":true}
