@@ -1,0 +1,53 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void Try(int n, int k, int a[])
+{
+    while (1)
+    {
+        for (int i = 1; i <= k; i++)
+            cout << a[i] << " ";
+        int i = k;
+        while (a[i] != n - k + 1 && i > 0)
+            i--;
+        if (i == 0)
+            break;
+        else
+        {
+            a[i]++;
+            for (int j = i + 1; j <= k; j++)
+                a[j] = a[j] + j - i;
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n, k;
+    cin >> n >> k;
+    int a[k + 1];
+    for (int i = 1; i <= k; i++)
+    {
+        a[i] = i;
+    }
+    // Try(n, k, a);
+    while (1)
+    { 
+        for (int i = 1; i <= k; i++)
+            cout << a[i] << " ";
+        int i = k;
+        while (a[i] == n - k + i && i > 0)
+            i--;
+        if (i == 0)
+            break;
+        else
+        {
+            a[i]++;
+            for (int j = i + 1; j <= k; j++)
+                a[j] = a[i] + j - i;
+        }
+        cout << endl;
+    }
+    return 0;
+}

@@ -4,48 +4,33 @@
     cin.tie(NULL);
 
 using namespace std;
-
-int binarySearch(int a[], int n, int k)
-{
-    int l, r;
-    l = 0;
-    r = n - 1;
-    do
-    {
-        int mid = (l + r) / 2;
-        if (a[mid] == k)
-            return k;
-        else if (a[mid] < k)
-            l = mid + 1;
-        else
-            r = mid - 1;
-    } while (l <= r);
-    return 0;
-}
-
-void solve()
-{
-    int n, k;
-    cin >> n >> k;
-    int a[n];
-    for (int i = 0; i < n; i++)
-    {
+void nhap(int n, int a[]){
+    cin >> n;
+    for(int i = 0; i < n; i++){
         cin >> a[i];
     }
-    if (binarySearch(a, n, k))
-        cout << "1\n";
-    else
-        cout << "-1\n";
+} 
+
+void xuat(int n, int a[]){
+    for(int i = 0; i < n; i++){
+        cout << a[i] << " ";
+    }
 }
+
+int isPrime(int n) {
+    int sqr = sqrt(n);
+    for (int i = 2; i <= sqr; i++)
+        if (n % i == 0) {
+            return false;
+        }
+    return n > 1;
+}
+
+
 
 int main()
 {
     fasten();
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        solve();
-    }
+    
     return 0;
 }

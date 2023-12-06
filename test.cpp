@@ -1,39 +1,29 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
-class sinhVien
-{
-public:
-    string maSinhVien, hoVaTen, className, email;
-    friend istream &operator>>(istream &is, sinhVien &sv)
-    {
-        getline(cin, sv.maSinhVien);
-        getline(cin, sv.hoVaTen);
-        getline(cin, sv.className);
-        getline(cin, sv.email);
-        return is;
-    }
-    friend ostream &operator<<(ostream &out, sinhVien &sv)
-    {
-        return out << sv.maSinhVien << " " << sv.hoVaTen << " " << sv.className << " " << sv.email << endl;
-    }
-};
-bool compare(sinhVien &sv1, sinhVien &sv2)
-{
-    return sv1.maSinhVien < sv2.maSinhVien;
-}
 int main()
 {
-    sinhVien sv[1000], x;
-    int n = 0;
-    while (cin >> x)
+    int n;
+    cin >> n;
+    int x[n + 1];
+    memset(x, 0, sizeof(x));
+    while (1)
     {
-        sv[n++] = x;
-    }
-    sort(sv, sv + n, compare);
-    for(int i = 0; i < n; i++){
-        cout << sv[i];
+        for (int i = 1; i <= n; i++)
+        {
+            cout << x[i] << " ";
+        }
+        int i = n;
+        while (x[i] == 1)
+        {
+            x[i] = 1 - x[i];
+            i--;
+        }
+        if (i == 0)
+            break;
+        else
+            x[i] = 1 - x[i];
+            cout << endl;
     }
     return 0;
 }
