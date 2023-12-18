@@ -1,29 +1,33 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
+
+int isPrime(int n) {
+    for (int i = 2; i*i <= n; i++)
+        if (n % i == 0) return 0;
+    return n > 1;
+}
 
 int main()
 {
-    int n;
-    cin >> n;
-    int x[n + 1];
-    memset(x, 0, sizeof(x));
-    while (1)
+    int t;
+    scanf("%d ", &t);
+    while (t--)
     {
-        for (int i = 1; i <= n; i++)
+        int check = 1;
+        int n;
+        scanf("%d ", &n);
+        int a[n];
+        for (int i = 0; i < n; ++i)
         {
-            cout << x[i] << " ";
+            scanf("%d ", &a[i]);
+            if (!isPrime(a[i]))
+            {
+                printf("no\n");
+                check = 0;
+                break;
+            }
         }
-        int i = n;
-        while (x[i] == 1)
-        {
-            x[i] = 1 - x[i];
-            i--;
-        }
-        if (i == 0)
-            break;
-        else
-            x[i] = 1 - x[i];
-            cout << endl;
+        if (check == 1)
+            printf("yes\n");
     }
     return 0;
 }
